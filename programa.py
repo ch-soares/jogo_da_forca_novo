@@ -48,24 +48,23 @@ while True:
     if eventos == 'Sair do Jogo':
         break
     if eventos == 'Dica':
-        janela['dica'].update(funcoes.dica())
+        print(funcoes.dica())
+        #janela['dica'].update(funcoes.dica())
     if eventos in nome_palavra and eventos not in letras_acertadas:
-
         for indice, letra in enumerate(nome_palavra):
             if eventos == letra:
                 letras_acertadas.append(eventos)
                 letras_acertadas.sort()
                 janela[indice].update(eventos)
-    if eventos not in nome_palavra and eventos != 'Dica':
+    if eventos not in nome_palavra and eventos in alfabeto_escolha:
         chances -= 1
         janela['chances'].update(chances)
         if chances == 0:
             sg.PopupOK('', 'Você perdeu!!')
-    if eventos not in escolhas and eventos != 'Dica':
+
+    if eventos not in escolhas and eventos in alfabeto_escolha:
         escolhas.append(eventos)
         escolhas.sort()
         janela['escolhas'].update(escolhas)
     if len(letras_acertadas) == len(nome_palavra):
         sg.Popup('Parabéns!')
-
-
