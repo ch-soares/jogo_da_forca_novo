@@ -27,7 +27,7 @@ layout = [
         [sg.Text('A palavra é...')],
         [sg.InputText(f'{letras}', size=(3, 3)) for letras in qtde_letras],
         [sg.Text()],
-        [sg.Text(f'Letras escolhidas:'), sg.InputText(key='escolhas')],
+        [sg.Text('Letras escolhidas:'), sg.InputText(key='escolhas')],
         [sg.Text()],
         [sg.Text('Quantidade de chances:'), sg.Text(chances, key='chances')],
         [sg.Text()],
@@ -49,7 +49,6 @@ while True:
         break
     if eventos == 'Dica':
         print(funcoes.dica())
-        #janela['dica'].update(funcoes.dica())
     if eventos in nome_palavra and eventos not in letras_acertadas:
         for indice, letra in enumerate(nome_palavra):
             if eventos == letra:
