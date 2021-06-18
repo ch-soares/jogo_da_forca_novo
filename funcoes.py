@@ -16,14 +16,6 @@ def escolha_da_palavra():
     return resposta_palavra['word']
 
 
-def cabecalho():
-    print('=' * 55)
-    print('JOGO DA FORCA'.center(55, '.'))
-    print('=' * 55)
-    print('Vamos Começar!!!'.center(55, ' '))
-    print('-' * 55)
-
-
 def dica():
     with open('palavra.txt') as palavra:
         requisicao_palavra = requests.get(f'https://api.dicionario-aberto.net/word/{palavra.read()}')
