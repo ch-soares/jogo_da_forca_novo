@@ -1,5 +1,5 @@
 # Jogo adivinha a palavra
-# Jogo da forca
+
 Jogo de adivinha a palavra para praticar a linguagem Python
 
 [![Build Status](https://travis-ci.com/ch-soares/jogo_da_forca_novo.svg?branch=main)](https://travis-ci.com/ch-soares/jogo_da_forca_novo)
