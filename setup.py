@@ -125,9 +125,9 @@ setup(
         "Framework :: Pytest",
     ],
     install_requires=[
-        'bs4'
-        'PySimpleGUI'
-        'requests'
+        'bs4',
+        'PySimpleGUI',
+        'requests',
         'Unidecode'
     ],
     zip_safe=False,
