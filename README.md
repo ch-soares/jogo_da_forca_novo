@@ -1,6 +1,6 @@
 # Jogo adivinha a palavra
 
-Jogo de adivinha a palavra para praticar a linguagem Python, utilizando a interface gráfica PySimpleGui.
+Jogo de adivinha a palavra para praticar a linguagem Python utilizando a biblioteca de interface gráfica PySimpleGui.
 
 
 [![Build Status](https://travis-ci.com/ch-soares/jogo_adivinha_palavra.svg?branch=main)](https://travis-ci.com/ch-soares/jogo_adivinha_palavra)
