@@ -55,15 +55,16 @@ while True:
                 letras_acertadas.append(eventos)
                 letras_acertadas.sort()
                 janela[indice].update(eventos)
+    if len(letras_acertadas) == len(nome_palavra):
+        with open('palavra.txt') as palavra:
+            leitura_da_palavra = palavra.read()
+            sg.Popup(f'Parabéns, você acertou! A palavra é {leitura_da_palavra}.')
     if eventos not in nome_palavra and eventos in alfabeto_escolha:
         chances -= 1
         janela['chances'].update(chances)
         if chances == 0:
             sg.PopupOK('', 'Você perdeu!!')
-
     if eventos not in escolhas and eventos in alfabeto_escolha:
         escolhas.append(eventos)
         escolhas.sort()
         janela['escolhas'].update(escolhas)
-    if len(letras_acertadas) == len(nome_palavra):
-        sg.Popup('Parabéns!')
