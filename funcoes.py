@@ -51,22 +51,6 @@ def palavra_do_arquivo():
         return palavra.read()
 
 
-def janela_iniciar_jogo():
-    layout = [
-            [sg.Button('Iniciar o jogo')],
-            [sg.Button('Sair')]
-            ]
-    janela = sg.Window('Jogo Adivinha Palavra', layout)
-
-    while True:
-        valor, evento = janela.read()
-        if evento == 'Iniciar o jogo':
-            #janela.hide()
-            return janela_jogo()
-        else:
-            break
-
-
 def janela_jogar_novamente():
     layout = [
             [sg.Button('Sim'), sg.Button('Não')]
