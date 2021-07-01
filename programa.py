@@ -1,3 +1,3 @@
 import funcoes
 
-janela = funcoes.janela_jogo()
+funcoes.janela_jogo()
