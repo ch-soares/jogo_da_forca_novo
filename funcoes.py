@@ -51,21 +51,12 @@ def palavra_do_arquivo():
         return palavra.read()
 
 
-def janela_jogar_novamente():
-    layout = [
-            [sg.Button('Sim'), sg.Button('Não')]
-            ]
-    janela = sg.Window('Deseja jogar novamente?', layout)
-
-    while True:
-        valor, evento = janela.read()
-        if evento == 'Sim':
-            janela.hide()
-            return janela_jogo()
-        else:
-            break
-
 def janela_jogo():
+    '''
+    Inicia o jogo
+    :return: irá retornar sempre o jogo, o jogador ganhando ou perdendo
+    '''
+    sg.theme('Dark2')
     escolha_da_palavra()
     nome_palavra = palavra_utilizada().upper()
 
@@ -104,7 +95,7 @@ def janela_jogo():
         [sg.Output(size=(50, 5), key='dica')],
     ]
 
-    janela = sg.Window('JOGO ADIVINHA A PALAVRA', layout)
+    janela = sg.Window('JOGO ADIVINHA A PALAVRA', layout, finalize=True)
 
     while True:
         eventos, valores = janela.read()
@@ -123,16 +114,18 @@ def janela_jogo():
         if len(letras_acertadas) == len(nome_palavra):
             with open('palavra.txt') as palavra:
                 leitura_da_palavra = palavra.read().capitalize()
-                sg.Popup(f'Parabéns, você acertou! A palavra é {leitura_da_palavra}.')
+                sg.Popup('Jogo Adivinha Palavra', f'Parabéns, você acertou! A palavra é {leitura_da_palavra}.')
+            janela.hide()
+            return janela_jogo()
         if eventos not in nome_palavra and eventos in alfabeto_escolha:
             chances -= 1
             janela['chances'].update(chances)
             if chances == 0:
                 with open('palavra.txt') as palavra:
                     leitura_da_palavra = palavra.read().capitalize()
-                sg.Popup(f'Que pena! A palavra era {leitura_da_palavra}.')
+                sg.Popup('Jogo Adivinha Palavra', f'Que pena! A palavra era {leitura_da_palavra}.')
                 janela.hide()
-                janela_jogar_novamente()
+                return janela_jogo()
 
         if eventos not in escolhas and eventos in alfabeto_escolha:
             escolhas.append(eventos)
