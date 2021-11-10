@@ -3,7 +3,7 @@
 Jogo de adivinha a palavra para praticar a linguagem Python utilizando a biblioteca de interface gráfica PySimpleGui.
 
 
-[![Build Status](https://travis-ci.com/ch-soares/jogo_adivinha_palavra.svg?branch=main)](https://travis-ci.com/ch-soares/jogo_adivinha_palavra)
+[![Build Status](https://app.travis-ci.com/ch-soares/jogo_adivinha_palavra.svg?branch=main)](https://app.travis-ci.com/ch-soares/jogo_adivinha_palavra)
 [![Updates](https://pyup.io/repos/github/ch-soares/jogo_adivinha_palavra/shield.svg)](https://pyup.io/repos/github/ch-soares/jogo_adivinha_palavra/)
 [![Python 3](https://pyup.io/repos/github/ch-soares/jogo_adivinha_palavra/python-3-shield.svg)](https://pyup.io/repos/github/ch-soares/jogo_adivinha_palavra/)
 
