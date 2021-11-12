@@ -2,8 +2,8 @@ beautifulsoup4==4.9.3
 certifi==2021.5.30
 chardet==4.0.0
 idna==3.2
-PySimpleGUI==4.4
-requests==1
+PySimpleGUI==4.45.0
+requests==2.25.1
 soupsieve==2.2.1
 Unidecode==1.2.0
-urllib3==1
+urllib3==1.26.5
