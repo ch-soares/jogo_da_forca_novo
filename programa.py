@@ -132,4 +132,5 @@ def janela_jogo():
             escolhas.sort()
             janela['escolhas'].update(escolhas)
 
+
 janela_jogo()
