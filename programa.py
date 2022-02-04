@@ -133,4 +133,5 @@ def janela_jogo():
             janela['escolhas'].update(escolhas)
 
 
-janela_jogo()
+if __name__ == '__main__':
+    janela_jogo()
