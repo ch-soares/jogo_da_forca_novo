@@ -10,6 +10,6 @@ pluggy==0.13.1
 py==1.10.0
 attrs==21.2.0
 toml==0.10.2
-packaging==20.9
+packaging==21.3
 pytest==6.2.4
 -r requirements.txt
