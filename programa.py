@@ -65,8 +65,8 @@ def janela_jogo():
     for caractere in nome_palavra:
         qtde_letras.append('')
 
-    alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    alfabeto_escolha = {
+    ALFABETO = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ALFABETO_ESCOLHA = {
         'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D', 'E': 'E', 'F': 'F',
         'G': 'G', 'H': 'H', 'I': 'I', 'J': 'J', 'K': 'K', 'L': 'L',
         'M': 'M', 'N': 'N', 'O': 'O', 'P': 'P', 'Q': 'Q', 'R': 'R',
@@ -88,8 +88,8 @@ def janela_jogo():
         [sg.Text('Quantidade de chances:'), sg.Text(chances, key='chances')],
         [sg.Text()],
         [sg.Text('Escolha uma letra')],
-        [sg.Button(f'{linha1}', size=(1, 1)) for linha1 in alfabeto[:13]],
-        [sg.Button(f'{linha2}', size=(1, 1)) for linha2 in alfabeto[13::]],
+        [sg.Button(f'{linha1}', size=(1, 1)) for linha1 in ALFABETO[:13]],
+        [sg.Button(f'{linha2}', size=(1, 1)) for linha2 in ALFABETO[13::]],
         [sg.Text()],
         [sg.Button('Dica'), sg.Button('Sair do Jogo')],
         [sg.Output(size=(50, 5), key='dica')],
@@ -117,7 +117,7 @@ def janela_jogo():
                 sg.Popup(f'Parabéns, você acertou! A palavra é {leitura_da_palavra}.')
             janela.hide()
             return janela_jogo()
-        if eventos not in nome_palavra and eventos in alfabeto_escolha:
+        if eventos not in nome_palavra and eventos in ALFABETO_ESCOLHA:
             chances -= 1
             janela['chances'].update(chances)
             if chances == 0:
@@ -127,7 +127,7 @@ def janela_jogo():
                 janela.hide()
                 return janela_jogo()
 
-        if eventos not in escolhas and eventos in alfabeto_escolha:
+        if eventos not in escolhas and eventos in ALFABETO_ESCOLHA:
             escolhas.append(eventos)
             escolhas.sort()
             janela['escolhas'].update(escolhas)
