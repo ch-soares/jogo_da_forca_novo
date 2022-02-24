@@ -114,7 +114,7 @@ def janela_jogo():
         if len(letras_acertadas) == len(nome_palavra):
             with open('palavra.txt') as palavra:
                 leitura_da_palavra = palavra.read().capitalize()
-                sg.Popup('Jogo Adivinha Palavra', f'Parabéns, você acertou! A palavra é {leitura_da_palavra}.')
+                sg.Popup(f'Parabéns, você acertou! A palavra é {leitura_da_palavra}.')
             janela.hide()
             return janela_jogo()
         if eventos not in nome_palavra and eventos in alfabeto_escolha:
@@ -123,7 +123,7 @@ def janela_jogo():
             if chances == 0:
                 with open('palavra.txt') as palavra:
                     leitura_da_palavra = palavra.read().capitalize()
-                sg.Popup('Jogo Adivinha Palavra', f'Que pena! A palavra era {leitura_da_palavra}.')
+                sg.Popup(f'Que pena! A palavra era {leitura_da_palavra}.')
                 janela.hide()
                 return janela_jogo()
 
