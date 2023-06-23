@@ -11,5 +11,5 @@ py==1.10.0
 attrs==21.4.0
 toml==0.10.2
 packaging==20.9
-pytest==7.0.1
+pytest==7.4.0
 -r requirements.txt
