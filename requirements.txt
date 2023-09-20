@@ -6,4 +6,4 @@ PySimpleGUI==4.57.0
 requests==2.25.1
 soupsieve==2.3.1
 Unidecode==1.2.0
-urllib3==1.26.8
+urllib3==2.0.5
