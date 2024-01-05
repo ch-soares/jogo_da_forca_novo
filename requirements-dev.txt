@@ -1,7 +1,7 @@
 flake8==4.0.1
 mccabe==0.6.1
 pycodestyle==2.8.0
-pyflakes==2.3.1
+pyflakes==3.2.0
 
 # Deps do pytest
 pyparsing==3.0.7
